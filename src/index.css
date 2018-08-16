@@ -5,4 +5,88 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: Verdana, Geneva, sans-serif;
+  background: #424242;
+  color: #fff;
+}
+
+.container {
+  padding: 60px;
+  text-align: center;
+}
+
+.header-title {
+  font-size: 2.2rem;
+}
+
+.header-explanation {
+  font-size: 1.7rem;
+}
+
+form {
+  margin-top: 15px;
+  padding: 25px;
+}
+
+input {
+  font-size: 1.3rem;
+  font-weight: bold;
+  height: 35px;
+  padding: 5px;
+  border-radius: 8px;
+  width: 20%;
+  min-width: 180px;
+}
+
+.cards {
+  margin-top: 20px;
+  width: 40%;
+  margin: auto;
+}
+
+.card-block {
+  padding: 30px;
+  font-size: 1.3rem;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  margin: 15px 0;
+  min-width: 280px;
+}
+
+.card-output-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-name {
+  font-weight: bold;
+  display: block;
+}
+
+.card-value {
+  color: #f2c81d;
+  display: block;
+}
+
+@media (max-width: 500px) {
+  .cards {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 60px 5px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .card-output-block {
+    display: block;
+  }
+
+  .card-name,
+  .card-value {
+    padding: 5px 0;
+  }
 }

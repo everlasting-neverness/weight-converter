@@ -17,7 +17,6 @@ class Main extends React.Component {
   }
 
   handleUserInput(e) {
-    console.log(e.target.value);
     let value = e.target.value;
     this.setState({
       grams: value / 0.0022046,
@@ -28,13 +27,15 @@ class Main extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <h1 className="header-title">Weight Converter</h1>
-        <div className="header-explanasion">Enter a value</div>
+        <div className="header-explanation">Enter a value</div>
         <Form handleUserInput={this.handleUserInput} />
-        <Card header="Grams:" value={this.state.grams} />
-        <Card header="Kilograms:" value={this.state.kg} />
-        <Card header="Ounces:" value={this.state.ounces} />
+        <div className="cards">
+          <Card header="Grams:" value={this.state.grams} />
+          <Card header="Kilograms:" value={this.state.kg} />
+          <Card header="Ounces:" value={this.state.ounces} />
+        </div>
       </div>
     );
   }
